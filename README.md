@@ -1,5 +1,5 @@
 # shiba
-shiba is a finder of api token from git repository.
+shiba is a finder of api token in git history.
 
 ### Usage
 
