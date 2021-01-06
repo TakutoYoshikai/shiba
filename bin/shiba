@@ -1,0 +1,8 @@
+#!/bin/bash
+
+shiba_dir=`dirname $0`/..
+repo=$1
+branch=$2
+token_len=$3
+python $shiba_dir/elemental-sight/esight/esight.py $1 $2
+bash $shiba_dir/trident/bin/trident $3
