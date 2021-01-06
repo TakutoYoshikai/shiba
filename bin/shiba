@@ -4,5 +4,11 @@ shiba_dir=`dirname $0`/..
 repo=$1
 branch=$2
 token_len=$3
-python $shiba_dir/elemental-sight/esight/esight.py $1 $2
+python $shiba_dir/elemental-sight/esight/esight.py $1 $2 -o SHIBA_RESULT
+cd SHIBA_RESULT
+if [ "$token_len" = "hex" ]; then
+  token_len=$4
+  bash $shiba_dir/trident/bin/trident-hex $token_len
+  exit
+fi
 bash $shiba_dir/trident/bin/trident $3
