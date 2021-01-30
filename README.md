@@ -1,6 +1,8 @@
 # shiba
 shiba is a finder of api token in git history. You can use shiba as a safety checker when you make your repository public.
 
+This is a security checker. DON'T abuse.
+
 ### Usage
 **install**
 ```bash
