@@ -6,8 +6,8 @@ branch=$2
 token_len=$3
 python3 $shiba_dir/elemental-sight/esight/esight.py $1 $2 -o SHIBA_RESULT
 cd SHIBA_RESULT
-rm */package-lock.json
-rm */yarn.lock
+rm */package-lock.json 2>/dev/null
+rm */yarn.lock 2>/dev/null
 if [ "$token_len" = "hex" ]; then
   token_len=$4
   bash $shiba_dir/trident/bin/trident-hex $token_len
